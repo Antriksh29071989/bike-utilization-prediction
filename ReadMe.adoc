@@ -25,6 +25,9 @@ Responsible for generating the model and provide prediction. In real case scenar
 First part will be responsible for training and saving the model and in second part, we can load the model
 and perform prediction.
 
+I have used RandomForestRegressor model with hypertuning of parameters as it performs well with Nonlinear Relationships
+and its Robustness to Overfitting. In prod, my idea will be to run multiple models in parallel with tools like https://www.kubeflow.org/[Kubeflow]
+and find out which one performs better.
 
 ## Exploratory Data analysis
 
