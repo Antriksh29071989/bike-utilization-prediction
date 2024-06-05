@@ -42,6 +42,8 @@ image::plots/weekly_usage.png[]
 
 ## Part 2 : Scalability and Robustness
 
+Q- What are the scaling properties of your model, if you assume that the amount of data you need to handle go up to several terabytes? Do you see any problems?
+
 The current solution is using small dataset. To get in scaled and handle up to several terabytes of data, we can use Apache Spark.
 Apache Spark has a https://spark.apache.org/docs/latest/ml-classification-regression#random-forest-regression[MLLib] module and we
 can do the preprocessing and model generation in distributed manner. I have used Google cloud platform and submitted apache spark jobs in
@@ -49,12 +51,17 @@ DataProc clusters. We can create a DataProc cluster with Node pools consists of 
 I have also used https://www.kubeflow.org/[Kubeflow] as Machine learning orchestration tool and created multiple self-service API's and pipelines. In this specific case -
 we can create an API wrapper and user/clients can trigger the pipeline by himself.
 
-One of the challenge with the approach is to calculate the correct number of executors and memory in advance.
-If one job is already running and occupying all the cluster resources and in the meantime other job wants to access the resources.
-It will be in queue.
-Montioring of autoscaling of the nodes.
-We should have monitoring mechanism in place.
+Q. How would you address these problems? Are there technologies for data storage/predictive modelling you can build upon? Describe how the technologies you mention solve the scaling problems you see with model.
 
+Please find the problems below:
+
+- Calculate the Spark correct number of executors and memory in advance. It will help you to use spark cluster resources efficiently.
+- If one job is already running and occupying all the cluster resources and in the meantime other job wants to access the resources , they will be in queue.
+we have to make sure that it is not creating deadlocks.
+- Monitoring of autoscaling of the nodes.
+- Creating alert mechanism and integrate will slack, msteams so in case of issue, respective stakeholders are aware about the issue.
+
+Do you have hands-on experience with such technologies? Which ones? For how long?
 I have experience with Apache Spark, Kubeflow, Jupyter notebooks and other similar technology stack.
 I am working in ML domain since past 8 years.
 
