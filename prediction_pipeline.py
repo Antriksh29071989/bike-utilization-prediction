@@ -38,14 +38,14 @@ data_analyzer.create_point_plot(df=filtered_df,
                                 x_axis='hour',
                                 y_axis='registered',
                                 hue='weekday',
-                                title='Count of bikes during weekdays and weekends: Registered users')
+                                title='Registered users')
 
 data_analyzer.create_point_plot(df=filtered_df,
                                 local_dir_path="plots/unregistered_users.png",
                                 x_axis='hour',
                                 y_axis='unregistered',
                                 hue='weekday',
-                                title='Count of bikes during weekdays and weekends: Unregistered users')
+                                title='Unregistered users')
 
 data_analyzer.create_point_plot(df=filtered_df,
                                 local_dir_path="plots/users_count_weekday.png",

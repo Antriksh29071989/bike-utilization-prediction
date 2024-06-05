@@ -3,7 +3,30 @@
 Build a prediction model for the hourly utilization “cnt” of this data set: https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset.
 I have save the local copy of the dataset in project under folder `bike_sharing_dataset`
 
-Exploratory Data analysis
+image::plots/pipeline.png[]
+
+I have created a pipeline with the following components:
+
+#### DataLoader
+Responsible for loading the data from the source. In the current problem we are loading the data from CSV file.
+This component can be extended to load the data from different sources like database, cloud buckets.
+
+#### Preprocessing
+Responsible for filtering data. In the current problem, it is removing redundant column and renaming some of the colums.
+
+#### Exploratory Data analysis
+Responsible for plotting different metrices and understand relation between the data.
+
+#### Feature Engineering
+Processing features before feeding it the ML algorithm.
+
+#### Model Generation & Prediction
+Responsible for generating the model and provide prediction. In real case scenarios it can be divided into two parts.
+First part will be responsible for training and saving the model and in second part, we can load the model
+and perform prediction.
+
+
+## Exploratory Data analysis
 
 image::plots/correlation.png[]
 
