@@ -51,7 +51,7 @@ DataProc clusters. We can create a DataProc cluster with Node pools consists of 
 I have also used https://www.kubeflow.org/[Kubeflow] as Machine learning orchestration tool and created multiple self-service API's and pipelines. In this specific case -
 we can create an API wrapper and user/clients can trigger the pipeline by himself.
 
-Q. How would you address these problems? Are there technologies for data storage/predictive modelling you can build upon? Describe how the technologies you mention solve the scaling problems you see with model.
+Q- How would you address these problems? Are there technologies for data storage/predictive modelling you can build upon? Describe how the technologies you mention solve the scaling problems you see with model.
 
 Please find the problems below:
 
@@ -62,10 +62,9 @@ we have to make sure that it is not creating deadlocks.
 - Creating alert mechanism and integrate will slack, msteams so in case of issue, respective stakeholders are aware about the issue.
 
 Do you have hands-on experience with such technologies? Which ones? For how long?
+
 I have experience with Apache Spark, Kubeflow, Jupyter notebooks and other similar technology stack.
 I am working in ML domain since past 8 years.
-
-
 
 ## Next Steps
 
